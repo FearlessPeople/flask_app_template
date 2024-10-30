@@ -13,8 +13,8 @@
 
 ### 增加接口
 
-直接在api包下开发，然后在app/__init__.py中注册蓝图即可
+直接在api包下开发，然后在`app/__init__.py`中注册蓝图即可
 
 ### 增加定时任务
 
-在jobs下编写对应定时任务py文件，然后在conf_scheduler.py中配置定时规则
+在jobs下编写对应定时任务py文件，然后在`conf_scheduler.py`中配置定时规则
