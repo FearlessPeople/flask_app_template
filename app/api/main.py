@@ -1,13 +1,16 @@
-# -*- coding: utf-8 -*-
+from flask import Blueprint, render_template
+from flask_login import login_required
+from app.logger import logger
+main = Blueprint('main', __name__)
 
-from flask import jsonify
-from flask_login import login_required, current_user
-from . import main_bp
 
-@main_bp.route('/dashboard', methods=['GET'])
+@main.route('/')
+def index():
+    logger.info("访问首页")
+    return render_template('index.html')
+
+
+@main.route('/dashboard')
 @login_required
 def dashboard():
-    return jsonify({
-        'message': 'Welcome to the dashboard',
-        'user': current_user.username
-    }), 200
+    return render_template('dashboard.html')
