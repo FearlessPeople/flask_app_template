@@ -1,9 +1,6 @@
-# flask_app_template
-Flask App项目模板
+# Flask App项目模板
 
-
-# 快速开始
-
+## 快速开始
 
 1. 下载项目`git clone git@github.com:FearlessPeople/flask_app_template.git`
 2. pycharm打开项目
@@ -13,4 +10,12 @@ Flask App项目模板
 6. 运行`run.py`启动项目
 7. 接口文档使用flasgger,访问路径http://localhost:5000/apidocs/
 
+## 开发指南
 
+### 新接口
+
+直接在api包下开发，然后在app/__init__.py中注册蓝图即可
+
+### 增加定时任务
+
+在jobs下编写对应定时任务py文件，然后在conf_scheduler.py中配置定时规则
